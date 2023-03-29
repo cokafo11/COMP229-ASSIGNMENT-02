@@ -1,0 +1,21 @@
+<!--Name: Caleb Okafor (301151683)
+    Course: COMP229 Assignment 01
+    Date: Feb 12, 2022.
+    Description: View for the 'Contact' web page-->
+<%-include partials_contact/header.ejs %>
+<body style="background-color: rgb(151, 151, 155);">
+  <!-- Vertial navigation bar beginning -->
+  <%-include partials_contact/main_nav.ejs %>
+  <!-- vertical navigation bar ending -->
+  <table>
+    <tr>
+      <td><img src="../Assets/images/logoCOMP229.png" alt="logo" id="logo"></td>
+      <td><h1><%= title %></h1></td>
+    </tr>
+  </table>
+  <%-include partials_contact/body %>    
+    <!-- <p>Welcome to <%= title %></p> -->
+    <%-include partials_contact/bottom_nav.ejs %>
+    <%-include partials_contact/footer.ejs %>
+  </body>
+  </html>

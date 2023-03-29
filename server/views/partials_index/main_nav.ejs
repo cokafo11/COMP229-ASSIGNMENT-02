@@ -1,0 +1,62 @@
+<!--Name: Caleb Okafor (301151683)
+    Course: COMP229 Assignment 01
+    Date: Feb 12, 2022.
+    Description: Partial 'main navigation' view for the 'Home' web page-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- Wrapping ejs around the list elements of the nav bar -->
+          <% if(title=="Home") {%>
+          <li class="nav-item active">
+            <%}else{%>
+              <li class="nav-item">
+                <%}%>
+            <a class="nav-link active" aria-current="page" href="/"><i class="fa-solid fa-house-chimney"></i>Home</a>
+          </li>
+          <% if(title=="About Me") {%>
+          <li class="nav-item active">
+            <%} else{%>
+              <li class="nav-item">
+                <%}%>
+            <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-address-card"></i>About Me</a>
+          </li>
+          <% if(title=="Projects") {%>
+            <li class="nav-item active">
+              <%} else{%>
+                <li class="nav-item">
+                  <%}%> 
+            <a class="nav-link active" aria-current="page" href="/projects"><i class="fa-solid fa-book-bookmark"></i>Projects</a>
+          </li>
+          <% if(title=="Services") {%>
+            <li class="nav-item active">
+              <%} else{%>
+                <li class="nav-item">
+                  <%}%>
+            <a class="nav-link active" aria-current="page" href="/services"><i class="fa-solid fa-computer"></i>Services</a>
+          </li>
+          <% if(title=="Contact") {%>
+            <li class="nav-item active">
+              <%} else{%>
+                <li class="nav-item">
+                  <%}%>
+            <a class="nav-link active" aria-current="page" href="/contact"><i class="fa-solid fa-address-book"></i></i>Contact</a>
+          </li>
+          <% if(title=="ContactList") {%>
+            <li class="nav-item active">
+              <%} else{%>
+            <a class="nav-link active" aria-current="page" href="/contactList"><i class="fa-solid fa-address-book"></i></i>Business Contact</a>
+            <%}%>
+          </li>
+          <%if(typeof displayName =='string' && displayName){%>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%=displayName%></li>
+            <li class="nav-item"><a href="/logout" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i>logout</a></li>
+            <%}else{%>
+              <li class ="nav-item"><a href="/login" class="nav-link"><i class="fas fa-lg fa-sign-in-alt"></i>Login</a></li>
+              <%}%>
+      </div>
+    <!-- </div> -->
+  </nav>

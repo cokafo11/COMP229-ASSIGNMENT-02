@@ -1,0 +1,80 @@
+/*Name: Caleb Okafor (301151683)
+  Course: COMP229 Assignment 01
+  Date: Feb 12, 2022.
+  Description: CSS file for index.ejs, about.ejs and projects.ejs*/
+#homePic {
+    border-radius: 15px;
+    width: 350px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    border: 10px solid rgb(59, 59, 79);
+}
+
+#homePageTable {
+    text-align: center;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px;
+}
+
+#welcomeStatement {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: purple;
+}
+
+#name {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(58, 37, 37);
+}
+
+#logo {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+#aboutPic {
+    border-radius: 50%;
+    width: 350px;
+    height: 500px;
+    border: 10px solid rgb(59, 59, 79);
+}
+
+#resume {
+    color: rgb(95, 8, 8);
+}
+
+.projectPictures {
+    width: 420px;
+    height: 300px;
+    padding-right: 20px;
+}
+
+#projectsTable {
+    width: 200px;
+}
+
+.tableHeading {
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(97, 14, 97);
+    font-weight: bold;
+}
+
+.projectDescription {
+    font-family: cursive;
+    padding: 50px;
+}

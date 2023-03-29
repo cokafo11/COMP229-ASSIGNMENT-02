@@ -1,0 +1,39 @@
+<!--Name: Caleb Okafor (301151683)
+    Course: COMP229 Assignment 01
+    Date: Feb 12, 2022.
+    Description: View for the 'Home' web page-->
+
+    <%-include ../partials_contact/header.ejs %>
+    <body style="background-color: rgb(151, 151, 155);">
+      <!-- Vertial navigation bar beginning -->
+      <%-include ../partials_contact/main_nav.ejs %>
+
+      <div class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <h1><%=title %></h1>
+                <form class="form" method="POST">
+                    <div class="form group">
+                        <label for="nameTextField">Name: </label>
+                        <input type="text" class="form control" id="nameTextField" placeholder="Enter Contact Name" name="name" value="<%=contact.name%>" required>
+                    </div>
+                    <div class="form group">
+                        <label for="numberTextField">Number: </label>
+                        <input type="text" class="form control" id="numberTextField" placeholder="Enter Number" name="number" value="<%=contact.number%>" required>
+                    </div>
+                    <div class="form group">
+                        <label for="publishedTextField">Email: </label>
+                        <input type="text" class="form control" id="emailTextField" placeholder="Enter email address" name="email" value="<%=contact.email%>" required>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i>submit</button>
+                    <a href="/contactList" class="btn btn-warning"><i class="fas fa-undo"></i>cancel</a>
+                </form>
+            </div>
+        </div>
+      </div>
+
+<%-include ../partials_contact/bottom_nav.ejs %>
+<%-include ../partials_contact/footer.ejs %>
+</body>
+</html>

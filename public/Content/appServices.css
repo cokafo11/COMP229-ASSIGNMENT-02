@@ -1,0 +1,25 @@
+/*Name: Caleb Okafor (301151683)
+  Course: COMP229 Assignment 01
+  Date: Feb 12, 2022.
+  Description: CSS file for contact.ejs*/
+h3 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: purple;
+    margin: auto;
+}
+
+.list {
+    margin: auto;
+    font-family: cursive;
+    font-size: larger;
+}
+
+.divClass {
+    margin: auto;
+    text-align: left;
+    width: 700px;
+    border: 7px solid black;
+    border-radius: 30px;
+    border-color: rgb(43, 43, 86);
+}

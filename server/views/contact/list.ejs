@@ -1,0 +1,47 @@
+<!--Name: Caleb Okafor (301151683)
+    Course: COMP229 Assignment 01
+    Date: Feb 12, 2022.
+    Description: View for the 'Home' web page-->
+
+    <%-include ../partials_contact/header.ejs %>
+    <body style="background-color: rgb(151, 151, 155);">
+      <!-- Vertial navigation bar beginning -->
+      <%-include ../partials_contact/main_nav.ejs %>
+      <!-- vertical navigation bar ending -->
+      <main class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col md-8">
+                <h1><%=title %></h1>
+                <br>
+                <table class="table.table - bordered table-striped table-hover">
+                    <!--Header Row-->
+                    <tr>
+                        <th class="text-center col-2">Name</th>
+                        <th class="text-center col-2">Number</th>
+                        <th class="text-center col-2">Email</th>
+                        <%if(typeof displayName =='string' && displayName){%>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                        <%}%>
+                        
+                    </tr>
+                    <% for(let count = 0; count<ContactList.length; count++){ %>
+                        <tr>
+                            <td class="text-center col-2"><%=ContactList[count].name%></td>
+                            <td class="text-center col-2"><%=ContactList[count].number%></td>
+                            <td class="text-center col-1"><%=ContactList[count].email%></td>
+                            <%if(typeof displayName =='string' && displayName){%>
+                            <td class="text-center col-1"><a href="contactList/update/<%=ContactList[count]._id%>" class="btn btn-primary"><i class="fa-sharp fa-solid fa-file-pen"></i></a>Update</td>
+                            <td class="text-center col-1"><a href="contactList/delete/<%=ContactList[count]._id%>" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>Delete</td>
+                            <%}%>
+                        </tr>
+                    <%}%>
+                </table>
+            </div>
+        </div>
+      </main>
+        <!-- <p>Welcome to <%= title %></p> -->
+        <%-include ../partials_contact/bottom_nav.ejs %>
+        <%-include ../partials_contact/footer.ejs %>
+      </body>
+      </html>
